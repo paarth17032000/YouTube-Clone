@@ -12,11 +12,13 @@ export default class Search extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        let search = this.state.search;
+        let { search } = this.state;
+        let { onFormSubmit } = this.props;
+        onFormSubmit(search);
     }
     render() {
         return (
-            <div className="container pt-5">
+            <div className="container pt-3">
                 <form onSubmit={this.handleSubmit}>
                     <input onChange={this.handleChange} className="form-control" type="text" placeholder="search here ..." />
                 </form>
