@@ -4,6 +4,7 @@ import api from './api/api'
 import Header from './components/header';
 import Search from './components/search';
 import VideoDetails from './components/videoDetail';
+import VideoList from './components/videoList';
 
 export default class App extends Component {
   state = {
@@ -25,6 +26,7 @@ export default class App extends Component {
     })
   }
   render() {
+    let { videos, selectedVideo } = this.state
     return (
       <div>
         <div className="App">
@@ -33,10 +35,10 @@ export default class App extends Component {
         <div className="container pt-5">
           <div className="row">
             <div className="col-sm-8">
-              <VideoDetails video={this.state.selectedVideo}/>
+              <VideoDetails video={selectedVideo}/>
             </div>
             <div className="col-sm-4">
-              {/* yt-small */}
+              <VideoList videos={videos}/>
             </div>
           </div>
         </div>
