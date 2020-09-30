@@ -25,6 +25,16 @@ export default class App extends Component {
       selectedVideo: data.data.items[0]
     })
   }
+  handlePlay = (video) => {
+    console.log(video);
+    this.setState({
+      selectedVideo: video
+    })
+  }
+  componentDidMount(){
+    let search = 'filtercopy';
+    this.handleSubmit(search);
+  }
   render() {
     let { videos, selectedVideo } = this.state
     return (
@@ -38,7 +48,7 @@ export default class App extends Component {
               <VideoDetails video={selectedVideo}/>
             </div>
             <div className="col-sm-4">
-              <VideoList videos={videos}/>
+              <VideoList videos={videos} selectedVideo={selectedVideo} handlePlay={this.handlePlay}/>
             </div>
           </div>
         </div>

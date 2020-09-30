@@ -8,7 +8,7 @@ export default function VideoDetails({video}) {
     console.log(video);
     return (
         <React.Fragment>
-            <div className="h-100">
+            <div className="h-25">
                 <iframe width="100%" height="100%" frameBorder="0" src={url}/>  
             </div>
             <div className="pt-2">
