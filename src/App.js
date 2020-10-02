@@ -26,7 +26,7 @@ export default class App extends Component {
     })
   }
   handlePlay = (video) => {
-    console.log(video);
+    // console.log(video);
     this.setState({
       selectedVideo: video
     })

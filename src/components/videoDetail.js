@@ -5,7 +5,7 @@ export default function VideoDetails({video}) {
         return <div><h1>Loading...</h1></div>
     const id = video.id.videoId;
     const url = `https://youtube.com/embed/${id}`;
-    console.log(video);
+    // console.log(video);
     return (
         <React.Fragment>
             <div className="h-25">
